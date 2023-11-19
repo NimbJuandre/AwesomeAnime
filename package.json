@@ -6,10 +6,18 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "type": "module",
   "dependencies": {
+    "@consumet/extensions": "^1.5.4",
     "@mdi/font": "7.0.96",
+    "@videojs-player/vue": "^1.0.0",
+    "axios": "^1.6.2",
+    "express": "^4.18.2",
+    "notyf": "^3.10.0",
     "pinia": "^2.0.23",
     "roboto-fontface": "*",
+    "unplugin-vue-components": "^0.25.2",
+    "video.js": "^8.6.1",
     "vue": "^3.2.0",
     "vue-router": "^4.0.0",
     "vuetify": "^3.0.0"
@@ -19,5 +27,10 @@
     "unplugin-fonts": "^1.0.3",
     "vite": "^4.2.0",
     "vite-plugin-vuetify": "^1.0.0"
-  }
+  },
+  "description": "## Project setup",
+  "main": "vite.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
