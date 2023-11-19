@@ -17,13 +17,14 @@
     "pinia": "^2.0.23",
     "roboto-fontface": "*",
     "unplugin-vue-components": "^0.25.2",
-    "video.js": "^8.6.1",
+    "video.js": "^7.21.5",
     "vue": "^3.2.0",
     "vue-router": "^4.0.0",
     "vuetify": "^3.0.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
+    "unplugin-auto-import": "^0.16.7",
     "unplugin-fonts": "^1.0.3",
     "vite": "^4.2.0",
     "vite-plugin-vuetify": "^1.0.0"
