@@ -1,9 +1,9 @@
 import express from 'express';
-import { ANIME } from '@consumet/extensions';
+import { META } from '@consumet/extensions';
 const app = express();
 const port = process.env.PORT || 3001;
 
-const gogoAnime = new ANIME.Gogoanime();
+const anilist = new META.Anilist();
 
 // CORS middleware to allow requests from your frontend
 app.use((req, res, next) => {
@@ -20,11 +20,21 @@ app.get('/api/search', async (req, res) => {
         return res.status(400).json({ error: 'Query parameter is required.' });
     }
 
+    // try {
+    //     const results = await gogoAnime.search(query);
+    //     res.json(results);
+    // } catch (error) {
+    //     console.error('Error searching for anime:', error);
+    //     res.status(500).json({ error: 'Internal Server Error' });
+    // }
+});
+
+app.get('/api/topAiring', async (req, res) => {
     try {
-        const results = await gogoAnime.search(query);
+        const results = await anilist.fetchTrendingAnime();
         res.json(results);
     } catch (error) {
-        console.error('Error searching for anime:', error);
+        console.error('Error finding the top airing anime:', error);
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });
@@ -37,13 +47,13 @@ app.get('/api/fetchAnimeInfo', async (req, res) => {
         return res.status(400).json({ error: 'AnimeID parameter is required.' });
     }
 
-    try {
-        const data = await gogoAnime.fetchAnimeInfo(query);
-        res.json(data);
-    } catch (error) {
-        console.error('Error fetching anime information:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
-    }
+    // try {
+    //     const data = await gogoAnime.fetchAnimeInfo(query);
+    //     res.json(data);
+    // } catch (error) {
+    //     console.error('Error fetching anime information:', error);
+    //     res.status(500).json({ error: 'Internal Server Error' });
+    // }
 });
 
 // API route to fetch anime episode sources
