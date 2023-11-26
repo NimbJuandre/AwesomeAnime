@@ -1,7 +1,7 @@
 <template>
-  <HelloWorld />
+  <TopCarousel />
 </template>
 
 <script setup>
-  import HelloWorld from '@/components/HelloWorld.vue'
+  import TopCarousel from '@/components/TopCarousel.vue'
 </script>
