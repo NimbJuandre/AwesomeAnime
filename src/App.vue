@@ -1,11 +1,14 @@
 <template>
   <v-layout class="rounded rounded-md">
     <!-- Top app bar -->
-    <v-app-bar title="Application bar">
-      <v-spacer></v-spacer>
-      <v-btn rounded>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
+    <v-app-bar>
+      <template v-slot:prepend>
+        <v-app-bar-nav-icon icon="mdi-home"></v-app-bar-nav-icon>
+      </template>
+      <v-app-bar-title>Photos</v-app-bar-title>
+      <template v-slot:append>
+        <v-btn icon="mdi-magnify"></v-btn>
+      </template>
     </v-app-bar>
 
     <!-- Views -->
